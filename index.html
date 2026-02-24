@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Adrian Curley, a UI/UX Designer and Front-end Developer. I build responsive, accessible, and visually appealing digital experiences that bring ideas to life.">
+    <title>Home | Adrian Curley</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="navbar">
+            <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+
+            <div class="nav-links left">
+                <a href="about.html">About</a>
+                <a href="works.html">Works</a>
+            </div>
+            
+            <a href="index.html" class="logo-container">
+                <img src="assets/logo.png" alt="Logo" class="nav-logo">
+            </a>
+
+            <div class="nav-links right">
+                <a href="resume.html">Resume</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="mobile-nav" aria-hidden="true">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="works.html">Works</a>
+                <a href="resume.html">Resume</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <div class="hero-content">
+                <img src="assets/darkstar-1.png" class="star star-1" alt="star">
+                <img src="assets/darkstar-2.png" class="star star-2" alt="star">
+                <img src="assets/darkstar-1.png" class="star star-3" alt="star">
+
+                <h2 class="hi-text">Hi! I'm</h2>
+                <h1 class="name-text">Adrian Curley</h1>
+            </div>
+            
+            <div class="tag-container">
+                <span class="tag">Web Developer</span>
+                <span class="tag">UI/UX Designer</span>
+            </div>
+        </section>
+
+        <div class="bear-section">
+            <div class="bear-container">
+                <div class="marquee">
+                    <div class="marquee-track left">
+                        <span>
+                            DESIGN • CODE • UI/UX • FRONT-END • DESIGN • CODE • UX • FRONT-END •
+                        </span>
+                    </div>
+
+                    <div class="marquee-track right">
+                        <span>
+                            ACCESSIBLE • RESPONSIVE • VISUALLY APPEALING • ACCESSIBLE • RESPONSIVE • VISUALLY APPEALING
+                        </span>
+                    </div>
+                </div>
+
+                <img src="assets/bear-section.png" alt="Bear Illustration" class="bear-square">
+            </div>
+        </div>
+
+        <section class="cta-section">
+            <p class="quote">“ Visualize the beauty. Develop the experience. Making the digital world a little more fun and intuitive, one website at a time. ”</p>
+            <div class="btn-group">
+                <a href="contact.html" class="btn">Get in touch!</a>
+                <a href="works.html" class="btn">Works</a>
+            </div>
+        </section>
+
+        <section class="featured-projects">
+            <h2 class="section-title">Featured Projects</h2>
+            
+            <div class="projects-grid">
+                <div class="project-item">
+                    <div class="card-visual">
+                        <div class="pin-wrapper-dark">
+                            <div class="pin-container-beige">
+                                <img src="assets/darkstar-1.png" alt="star" class="pin-star">
+                            </div>
+                        </div>
+                        <div class="image-stack">
+                            <img src="assets/project1-front.jpg" alt="Project Front" class="img-front">
+                            <img src="assets/project1-back.jpg" alt="Project Back" class="img-back">
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <p class="project-category">E-commerce Website</p>
+                        <h3 class="project-name">Floravia</h3>
+                        <p class="project-desc">A brief description of the project goals and your specific role in development.</p>
+                        
+                        <div class="project-tags">
+                            <span class="p-tag">MongoDB</span>
+                            <span class="p-tag">Express</span>
+                            <span class="p-tag">Vue</span>
+                            <span class="p-tag">Node</span>
+                        </div>
+
+                        <div class="view-work">
+                            <h4>View Work</h4>
+                            <div class="work-buttons">
+                                <a href="https://github.com/seowfie/6WCSERVER-WD-301-FLORAVIA.git" target="_blank" class="work-btn">
+                                    <img src="assets/github.png" alt="github">
+                                    <span>Github Repo</span>
+                                </a>
+                                <a href="https://6-wcserver-wd-301-floravia-3gl1.vercel.app" target="_blank" class="work-btn">
+                                    <img src="assets/website.png" alt="website">
+                                    <span>Live Website</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="card-visual">
+                        <div class="pin-wrapper-dark">
+                            <div class="pin-container-beige">
+                                <img src="assets/darkstar-1.png" alt="star" class="pin-star">
+                            </div>
+                        </div>
+                        <div class="image-stack">
+                            <img src="assets/project2-front.jpg" alt="Project Front" class="img-front">
+                            <img src="assets/project2-back.jpg" alt="Project Back" class="img-back">
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <p class="project-category">E-commerce Web App</p>
+                        <h3 class="project-name">Curio Store</h3>
+                        <p class="project-desc">Focusing on user interaction and complex state management.</p>
+                        <div class="project-tags">
+                            <span class="p-tag">Flutter</span>
+                            <span class="p-tag">Dart</span>
+                        </div>
+                        <div class="view-work">
+                            <h4>View Work</h4>
+                            <div class="work-buttons">
+                                <a href="https://github.com/seowfie/CurioShop.git" target="_blank"class="work-btn">
+                                    <img src="assets/github.png" alt="github">
+                                    <span>Github Repo</span>
+                                </a>
+                                <a href="assets/curiostore.apk" class="work-btn" download="curiostore.apk">
+                                    <img src="assets/download-button.png" alt="download button"> 
+                                    <span>Download APK</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="card-visual">
+                        <div class="pin-wrapper-dark">
+                            <div class="pin-container-beige">
+                                <img src="assets/darkstar-1.png" alt="star" class="pin-star">
+                            </div>
+                        </div>
+                        <div class="image-stack">
+                            <img src="assets/project3-front.jpg" alt="Project Front" class="img-front">
+                            <img src="assets/project3-back.jpg" alt="Project Back" class="img-back">
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <p class="project-category">Business Website</p>
+                        <h3 class="project-name">AC Table Tennis Club</h3>
+                        <p class="project-desc">A clean, responsive landing page with custom illustrations.</p>
+                        <div class="project-tags">
+                            <span class="p-tag">Wordpress</span>
+                            <span class="p-tag">SEO</span>
+                        </div>
+                        <div class="view-work">
+                            <h4>View Work</h4>
+                            <div class="work-buttons">
+                                <a href="https://actabletennisclub.pro/" target="_blank" class="work-btn">
+                                    <img src="assets/website.png" alt="website">
+                                    <span>Live Website</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <img src="assets/logo.png" alt="Logo" class="footer-logo">
+            
+            <div class="footer-center">
+                <nav class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="works.html">Works</a>
+                    <a href="resume.html">Resume</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <p class="copyright">© 2025 Adrian Curley. All rights reserved</p>
+            </div>
+
+            <div class="social-grid">
+                <a href="https://www.linkedin.com/in/adrian-curley-73002b351/" target="_blank" rel="noopener">
+                    <img src="assets/linkedin.png" alt="LinkedIn">
+                </a>
+
+                <a href="https://www.facebook.com/adrncurley" target="_blank" rel="noopener">
+                    <img src="assets/facebook.png" alt="Facebook">
+                </a>
+
+                <a href="mailto:adriancurley9@gmail.com">
+                    <img src="assets/email.png" alt="Email">
+                </a>
+
+                <a href="https://github.com/Korlii" target="_blank" rel="noopener">
+                    <img src="assets/github.png" alt="GitHub">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navbar = document.querySelector('.navbar');
+
+        navToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            var open = navbar.classList.toggle('nav-open');
+            this.setAttribute('aria-expanded', open);
+            var mobile = navbar.querySelector('.mobile-nav');
+            if(mobile) mobile.setAttribute('aria-hidden', !open);
+        });
+
+        document.addEventListener('click', function(e) {
+            const mobileNav = document.querySelector('.mobile-nav');
+            if (navbar.classList.contains('nav-open') && 
+                !mobileNav.contains(e.target) && 
+                !navToggle.contains(e.target)) {
+                
+                navbar.classList.remove('nav-open');
+                navToggle.setAttribute('aria-expanded', 'false');
+                mobileNav.setAttribute('aria-hidden', 'true');
+            }
+        });
+    </script>
+
+</body>
+</html>

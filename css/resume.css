@@ -1,0 +1,503 @@
+:root {
+    --dark-brown: #31261f;
+    --light-brown: #8e6d56;
+    --beige: #fff3e1;
+    --amber: #ffd240;
+}
+
+/* --- General Resets --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--beige);
+    font-family: 'Prompt', sans-serif;
+    overflow-x: hidden;
+    color: var(--dark-brown);
+}
+
+/* --- Header & Background --- */
+.main-header {
+    background-color: var(--light-brown);
+    position: relative;
+    padding: 3rem 0 8rem 0; 
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: visible; 
+}
+
+/* --- Navbar --- */
+.navbar {
+    background: var(--dark-brown);
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    height: 4.5rem;
+    padding: 0 5rem; 
+    gap: 4rem;
+    border-radius: 100px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    width: auto; 
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+.logo-container {
+    width: 110px;
+    height: 110px; 
+    background-color: var(--dark-brown);
+    padding: 0.6rem;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    z-index: 10;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-logo {
+    width: 100%;
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    flex: 1; 
+}
+
+.nav-links.left { 
+    justify-content: flex-end; 
+    margin-right: 70px; 
+}
+
+.nav-links.right { 
+    justify-content: flex-start; 
+    margin-left: 70px; 
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Righteous', sans-serif;
+    margin: 0 1.2rem;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.nav-links a:hover {
+    color: var(--amber);
+    transform: scale(1.1);
+}
+
+/* --- Responsive Navbar (mobile) --- */
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background: white;
+    border-radius: 3px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+}
+
+.hamburger::before { top: -8px; }
+.hamburger::after { top: 8px; }
+
+.mobile-nav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 80%;
+    max-width: 320px;
+    background: var(--dark-brown);
+    padding: 6rem 2rem;
+    transform: translateX(-100%); 
+    transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+    flex-direction: column;
+    gap: 1.5rem;
+    z-index: 1000;
+    box-shadow: 10px 0 30px rgba(0,0,0,0.3);
+}
+
+.mobile-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 0.8rem;
+    display: block;
+    font-weight: 700;
+}
+
+.navbar.nav-open .mobile-nav { transform: translateX(0); }
+.navbar.nav-open .hamburger { background: transparent; }
+.navbar.nav-open .hamburger::before { top: 0; transform: rotate(45deg); }
+.navbar.nav-open .hamburger::after { top: 0; transform: rotate(-45deg); }
+
+/* --- Footer --- */
+.main-footer {
+    background: var(--dark-brown);
+    color: white;
+    padding: 3rem 5%;
+    margin-top: 6rem;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-logo {
+    width: 6rem;
+    height: auto;
+}
+
+.footer-center {
+    border-left: 2px solid var(--beige);
+    padding-left: 2rem;
+    flex: 1;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Prompt', sans-serif;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--amber);
+    transform: scale(1.1);
+}
+
+.copyright {
+    opacity: 0.5;
+    font-size: 0.85rem;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.social-grid img {
+    width: 2.3rem;
+    height: 2.3rem;
+    transition: transform 0.3s ease;
+}
+
+.social-grid a:hover img {
+    transform: scale(1.12);
+}
+
+/* --- Resume Hero Section --- */
+.resume-hero {
+    position: relative;
+    text-align: center;
+    margin-top: -3.5rem;
+    padding: 0 1rem 3rem;
+    overflow: hidden;
+}
+
+.resume-hero-inner {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+/* Stars — positioned relative to .resume-hero */
+.resume-star {
+    position: absolute;
+    animation: resumeStarMove 2s infinite ease-in-out;
+    filter: drop-shadow(-2px 3px 1px var(--light-brown));
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Left of the pill - moved closer */
+.resume-star-left {
+    width: clamp(18px, 3vw, 28px);
+    left: 25%;
+    top: 35%;
+    animation-delay: -0.4s;
+}
+
+/* Right of the pill - moved closer */
+.resume-star-right {
+    width: clamp(22px, 3.5vw, 34px);
+    right: 25%;
+    top: 30%;
+    animation-delay: 0s;
+}
+
+@keyframes resumeStarMove {
+    0%, 100% { transform: rotate(-15deg) scale(1); }
+    50%       { transform: rotate(15deg) scale(1.2); }
+}
+
+/* The pill itself */
+.resume-title-pill {
+    background-color: var(--beige);
+    border: 3px solid var(--light-brown);
+    border-radius: 100px;
+    padding: 1rem 3.5rem;
+    display: inline-block;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.resume-title-text {
+    font-family: 'Righteous', sans-serif;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    color: var(--light-brown);
+    white-space: nowrap;
+}
+
+.resume-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--dark-brown);
+    font-weight: 600;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* --- Resume Sections --- */
+.resume-section {
+    padding: 3rem 0 1rem;
+}
+
+.resume-section-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.resume-section-icon {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+}
+
+.resume-section-title {
+    font-family: 'Righteous', sans-serif;
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    color: var(--dark-brown);
+}
+
+/* Two-column grid for education & certifications */
+.resume-two-col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 3rem;
+}
+
+/* Each bordered item */
+.resume-item {
+    border-left: 4px solid var(--dark-brown);
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    
+    padding: 1rem;            
+    border-radius: 0 10px 10px 0px;     
+    transition: all 0.4s ease;  
+    background-color: transparent; 
+}
+
+.resume-item:hover {
+    background-color: var(--dark-brown);
+    cursor: pointer;
+    transform: scale(1.03) translateY(-5px); 
+    border-left-color: var(--light-brown); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.resume-item:hover .resume-item-title,
+.resume-item:hover .resume-item-sub,
+.resume-item:hover .resume-item-meta {
+    color: var(--beige);
+    opacity: 1;
+    transition: color 0.3s ease;
+}
+
+.resume-item-title {
+    font-family: 'Prompt', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--dark-brown);
+    line-height: 1.4;
+}
+
+.resume-item-sub {
+    font-size: 0.9rem;
+    color: var(--dark-brown);
+    opacity: 0.85;
+}
+
+.resume-item-meta {
+    font-size: 0.85rem;
+    color: var(--dark-brown);
+    opacity: 0.6;
+}
+
+/* Experience Card */
+.experience-card {
+    background-color: var(--dark-brown);
+    border-radius: 20px;
+    padding: 2rem 2.5rem;
+    color: white;
+}
+
+.experience-title {
+    font-family: 'Righteous', sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: var(--beige);
+    margin-bottom: 0.8rem;
+}
+
+.experience-tag {
+    display: inline-block;
+    background-color: var(--beige);
+    color: var(--dark-brown);
+    font-family: 'Prompt', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 0.3rem 1.2rem;
+    border-radius: 100px;
+    margin-bottom: 1.5rem;
+}
+
+.experience-list {
+    list-style: disc;
+    padding-left: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.experience-list li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--beige);
+    opacity: 0.92;
+}
+
+/* Download Section */
+.resume-download {
+    text-align: center;
+    padding: 3rem 0 2rem;
+}
+
+.download-label {
+    font-family: 'Prompt', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--dark-brown);
+    margin-bottom: 1.2rem;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background-color: var(--dark-brown);
+    color: var(--beige);
+    font-family: 'Righteous', sans-serif;
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 1rem 2.5rem;
+    border-radius: 15px;
+    margin-top: 0.8rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: var(--light-brown);
+    transform: scale(1.05);
+}
+
+.download-btn img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* --- Container & Responsive --- */
+.container { 
+    padding-inline: 5%; 
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        width: 100%;
+        max-width: calc(100% - 2rem);
+        justify-content: space-between;
+        padding: 0 1rem;
+    }
+    
+    .nav-links { display: none; }
+    .nav-toggle { display: block; order: -1; }
+    
+    .logo-container { 
+        position: static; 
+        transform: none; 
+        width: 70px; 
+        height: 70px; 
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-content { flex-direction: column; align-items: center; text-align: center; }
+    .footer-center { border-left: none; padding-left: 0; }
+    .resume-star-left { left: 2vw; }
+    .resume-star-right { right: 2vw; }
+    .resume-description { font-size: 0.9rem; }
+    .resume-two-col { grid-template-columns: 1fr; }
+    .experience-card { padding: 1.5rem; }
+    .footer-links {
+        gap: 0.8rem;
+        font-size: 0.85rem;
+        justify-content: center;
+    }
+}
